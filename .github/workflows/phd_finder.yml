@@ -36,6 +36,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main || true
-          git add "List of emails.xlsx" "List of emails.xlsx - Sheet1.csv" 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update checked status [skip ci]" && git push origin main)
+          git add "List of emails.xlsx" "List of emails.xlsx - Sheet1.csv" || true
+          git commit -m "Update checked status [skip ci]" || echo "No changes to commit"
+          git push origin main || (git pull origin main --rebase && git push origin main)
