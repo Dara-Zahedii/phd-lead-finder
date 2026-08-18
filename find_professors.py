@@ -7,24 +7,21 @@ import pandas as pd
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-# Check which file exists
-if os.path.exists("List of emails.xlsx - Sheet1.csv"):
-    FILE_NAME = "List of emails.xlsx - Sheet1.csv"
-elif os.path.exists("List of emails.xlsx"):
-    FILE_NAME = "List of emails.xlsx"
-else:
-    FILE_NAME = "List of emails.xlsx - Sheet1.csv"
+# Detect working file
+CSV_FILE = "List of emails.xlsx - Sheet1.csv"
+XLSX_FILE = "List of emails.xlsx"
 
-# Comprehensive taxonomy split into queries
+FILE_TO_LOAD = XLSX_FILE if os.path.exists(XLSX_FILE) else CSV_FILE
+
 SEARCH_GROUPS = [
-    ["ultra-wideband", "indoor localization", "indoor positioning", "channel impulse response", "CSI sensing"],
-    ["wireless localization", "RF sensing", "sensor fusion", "ISAC", "6G localization"],
-    ["edge AI", "tinyML", "FPGA hardware accelerator", "embedded machine learning"]
+    ["ultra-wideband", "indoor localization", "indoor positioning", "channel impulse response", "CSI sensing", "TDoA"],
+    ["wireless localization", "RF sensing", "sensor fusion", "ISAC", "6G localization", "pedestrian dead reckoning"],
+    ["edge AI", "tinyML", "FPGA hardware accelerator", "embedded machine learning", "autonomous systems localization"]
 ]
 
 def send_telegram_html(text):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        print("[!] Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID secrets.")
+        print("[!] Missing Telegram credentials.")
         return
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
@@ -33,22 +30,23 @@ def send_telegram_html(text):
         "parse_mode": "HTML",
         "disable_web_page_preview": True
     }
-    res = requests.post(url, json=payload, timeout=20)
-    if res.status_code != 200:
-        print(f"[!] Telegram Error: {res.text}")
-    else:
-        print("[✓] Telegram notification sent.")
+    requests.post(url, json=payload, timeout=20)
 
 def clean_university_name(name):
-    """Cleans up names like 'Singapore University of Tech (QS 519)' -> 'Singapore University of Tech'"""
+    """Normalizes university names so OpenAlex finds them reliably."""
     name = str(name).strip()
-    name = re.sub(r'\(.*?\)', '', name)  # remove parenthetical info
-    name = re.sub(r'[",]', '', name)      # remove leftover quotes/commas
+    # If combined like "ETH Zürich and Bologna" or "IMEC / KU Leuven", take first main part
+    if " and " in name:
+        name = name.split(" and ")[0]
+    if " / " in name:
+        name = name.split(" / ")[-1]  # e.g., 'IMEC / KU Leuven' -> 'KU Leuven'
+    name = re.sub(r'\(.*?\)', '', name)  # Remove (QS 519), (UCI), etc.
+    name = re.sub(r'[",]', '', name)
     return name.strip()
 
 def search_faculty(raw_uni_name):
     clean_name = clean_university_name(raw_uni_name)
-    print(f"--> Searching OpenAlex for: {clean_name}")
+    print(f"--> Searching OpenAlex for: {clean_name} (from: {raw_uni_name})")
     discovered = []
     headers = {"User-Agent": "mailto:phd_bot@academic.org"}
 
@@ -56,7 +54,7 @@ def search_faculty(raw_uni_name):
         inst_url = f"https://api.openalex.org/institutions?search={requests.utils.quote(clean_name)}"
         res = requests.get(inst_url, headers=headers, timeout=15).json()
         if not res.get("results"):
-            print(f"    [!] Institution not resolved for {clean_name}")
+            print(f"    [!] Institution not resolved for: {clean_name}")
             return discovered
         inst_id = res["results"][0]["id"]
     except Exception as e:
@@ -80,12 +78,12 @@ def search_faculty(raw_uni_name):
                     pub_year = work.get("publication_year", "")
                     authorships = work.get("authorships", [])
                     
-                    # Senior lab PI is usually the last author in engineering papers
-                    chosen_author = authorships[-1] if len(authorships) > 1 else (authorships[0] if authorships else None)
-                    if chosen_author:
-                        author_info = chosen_author.get("author", {})
+                    # Grab senior PI (last author) or first author
+                    chosen = authorships[-1] if len(authorships) > 1 else (authorships[0] if authorships else None)
+                    if chosen:
+                        author_info = chosen.get("author", {})
                         discovered.append({
-                            "professor": author_info.get("display_name", "Lab Lead"),
+                            "professor": author_info.get("display_name", "Lab PI"),
                             "university": raw_uni_name,
                             "paper": title,
                             "year": pub_year,
@@ -98,17 +96,16 @@ def search_faculty(raw_uni_name):
     return discovered
 
 def main():
-    print(f"Reading file: {FILE_NAME}")
-    if not os.path.exists(FILE_NAME):
-        print(f"[!] Error: {FILE_NAME} does not exist!")
-        return
-
-    df = pd.read_csv(FILE_NAME) if FILE_NAME.endswith(".csv") else pd.read_excel(FILE_NAME)
+    print(f"Reading file: {FILE_TO_LOAD}")
+    if FILE_TO_LOAD.endswith(".csv"):
+        df = pd.read_csv(FILE_TO_LOAD)
+    else:
+        df = pd.read_excel(FILE_TO_LOAD)
 
     if "Checked?" not in df.columns:
         df["Checked?"] = "NO"
 
-    # Filter out empty rows and rows that have already been checked
+    # Prioritize rows where University exists, Professor is EMPTY, and not checked yet
     mask = (
         (df["University"].notna()) & 
         (df["University"].astype(str).str.strip() != "") & 
@@ -122,6 +119,7 @@ def main():
         send_telegram_html("🎉 <b>All universities in your Excel have been processed!</b>")
         return
 
+    # Process next batch of 5
     batch = pending_rows.head(5)
     universities = batch["University"].tolist()
     print(f"Processing Batch of 5: {universities}")
@@ -134,25 +132,33 @@ def main():
 
         if profs:
             all_matches.extend(profs)
-            if pd.isna(df.at[idx, "Professor"]) or str(df.at[idx, "Professor"]).strip() in ["", "nan", "NaN"]:
-                df.at[idx, "Professor"] = profs[0]["professor"]
-                df.at[idx, "Subject"] = profs[0]["paper"]
+            # Write discovered PI and paper directly into the row
+            df.at[idx, "Professor"] = profs[0]["professor"]
+            df.at[idx, "Subject"] = f"{profs[0]['paper']} ({profs[0]['year']})"
+            df.at[idx, "Note"] = profs[0]["profile_url"]
         time.sleep(1)
 
-    # Save changes
-    if FILE_NAME.endswith(".csv"):
-        df.to_csv(FILE_NAME, index=False)
-    else:
-        df.to_excel(FILE_NAME, index=False)
+    # Save to BOTH CSV and XLSX to ensure sync
+    try:
+        df.to_excel(XLSX_FILE, index=False)
+        print(f"[✓] Saved updated {XLSX_FILE}")
+    except Exception:
+        pass
 
-    # Format Telegram Message (Using HTML to avoid markdown parsing bugs)
+    try:
+        df.to_csv(CSV_FILE, index=False)
+        print(f"[✓] Saved updated {CSV_FILE}")
+    except Exception:
+        pass
+
+    # Send report to Telegram
     if all_matches:
-        msg = f"🎯 <b>Discovered {len(all_matches)} Faculty Matches (5 Universities):</b>\n\n"
-        for item in all_matches[:7]:
+        msg = f"🎯 <b>Discovered {len(all_matches)} New Professors (5 Universities):</b>\n\n"
+        for item in all_matches:
             msg += (
                 f"🏛 <b>{item['university']}</b>\n"
                 f"👤 <b>PI:</b> {item['professor']}\n"
-                f"📄 <b>Recent Work ({item['year']}):</b> <i>{item['paper'][:90]}...</i>\n"
+                f"📄 <b>Recent Work ({item['year']}):</b> <i>{item['paper'][:85]}...</i>\n"
                 f"🔗 <a href='{item['profile_url']}'>OpenAlex Author Profile</a>\n\n"
             )
         send_telegram_html(msg)
