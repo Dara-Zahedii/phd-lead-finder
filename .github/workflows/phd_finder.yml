@@ -1,0 +1,36 @@
+name: Discover Professors (Daily Batch of 5)
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Runs automatically every 24 hours at 08:00 UTC
+  workflow_dispatch:      # Allows manual click anytime
+
+jobs:
+  run-lead-finder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pandas openpyxl
+
+      - name: Run Lead Discovery Script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python find_professors.py
+
+      - name: Commit and push updated file back to repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add "List of emails.xlsx" || git add "List of emails.xlsx - Sheet1.csv"
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update checked status [skip ci]" && git push)
