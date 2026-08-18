@@ -1,0 +1,156 @@
+Professor,University,Country,Ranking,Subject,Email?,Responed?,Fund,Dead line,Priority,Note,Email addresss,Checked?
+Davide Dardari,University of Bologna,Italy,,Wireless communication and localization,☑,N,P ~1700,,6.0,,,YES
+Carlo Alberto Boano,Graz University of Technology,Austria,,"IoT, Wireless Sensor Networks",☑,Y!,??,,7.0,they answered and told me to apply again for spring 2026,carloalberto.boano@gmail.com,YES
+Ismail Guvenc,North Carolina State University,The US,,"5G, Localization",☐,,,,5.0,,,YES
+,Radbound University,NL,,"Neuroscience, AI and Medicine Exploring Neural Mechanisms of Movement",☑,Y,"€ 3,059 - € 3,881",2025-10-15,7.0,,,YES
+Klaus Witrisal, Graz University of Technology,Austria,,Wireless CommunicationsSignal ProcessingChannel ModelingRadio Localization and Sensing,☐,,3000,,6.0,,,YES
+Olga Saukh, Graz University of Technology,Austria,,embedded intelligencemachine learningdeep learningsensingedge AI,☐,,,,6.0,,,YES
+Rajesh Balan,Singapore Management University,Singapore,,"GPS, Software",☐,,,,6.0,,rajesh@smu.edu.sg,YES
+Niki Trigoni,University of Oxford,UK,,Sensor networksIndoor localisationCyber physical systems,☐,,,,8.0,,niki.trigoni@cs.ox.ac.uk,YES
+Juha Plosila,University of Turku,Finland,,"embedded systems, multiprocessor system-on-chip (SoC), heterogeneous systems, reconfigurable computing, digital circuits and systems.",☐,,,,5.0,,,YES
+Antti Honkela,University of Helsinki,Finland,,Data Science (Machine Learning & AI),☐,,,,9.0,,,YES
+Jukka Talvitie,University of Helsinki,Finland,,Toward Seamless Localization: Situational Awareness Using UWB Wearable Systems and Convolutional Neural Networks (2023),☐,,,,9.0,https://openalex.org/A5044609448,,YES
+Luca Benini,ETH Zürich and Bologna,Switzerland and Italy,,Self-Sustaining Ultrawideband Positioning System for Event-Driven Indoor Localization (2023),☐,,,,10.0,https://openalex.org/A5043408422,,YES
+Cheng‐Wei Qiu,National University of Singapore (NUS),Singapore,,Origami metamaterials for ultra-wideband and large-depth reflection modulation (2024),☐,,,,10.0,https://openalex.org/A5089609880,,YES
+Solmaz S. Kia,"University of California, Irvine (UCI)",The Us,,Self-Localizing On-Demand Portable Wireless Beacons for Coverage Enhancement of RF Beacon-Based Indoor Localization Systems (2023),☐,,,,8.0,https://openalex.org/A5049439078,,YES
+,,,,,,,,,,,,NO
+Cheng‐Wei Qiu,National University of Singapore (NUS),Singapore,,Origami metamaterials for ultra-wideband and large-depth reflection modulation (2024),,,,,10.0,https://openalex.org/A5089609880,,YES
+,"Nanyang Technological University, Singapore (NTU Singapore)",Singapore,,,,,,,10.0,,,NO
+,Singapore University of Technology and Design (QS 519),Singapore,,,,,,,10.0,I like it,,NO
+,The University of Auckland,New Zealand,,,,,,,7.0,,,NO
+,University of Otago,New Zealand,,,,,,,6.0,,,NO
+,The University of Tokyo,Japan,,,,,,,10.0,,,NO
+,Kyoto University,Japan,,,,,,,10.0,,,NO
+,Tokyo Institute of Technology (Tokyo Tech),Japan,,,,,,,10.0,,,NO
+,Osaka University,Japan,,,,,,,10.0,,,NO
+,Tohoku University,Japan,,,,,,,9.0,,,NO
+,Nagoya University,Japan,,,,,,,9.0,,,NO
+,Hokkaido University,Japan,,,,,,,9.0,,,NO
+,Kyushu University,Japan,,,,,,,9.0,,,NO
+,Waseda University,Japan,,,,,,,9.0,,,NO
+,Keio University,Japan,,,,,,,9.0,,,NO
+,Seoul National University,South Korea,,,,,,,10.0,,,NO
+,Yonsei University,South Korea,,,,,,,10.0,,,NO
+,Korea University,South Korea,,,,,,,10.0,,,NO
+,Pohang University of Science And Technology (POSTECH),South Korea,,,,,,,10.0,,,NO
+,Sungkyunkwan University (SKKU),South Korea,,,,,,,10.0,,,NO
+,Hanyang University,South Korea,,,,,,,9.0,,,NO
+,Ulsan National Institute of Science and Technology (UNIST),South Korea,,,,,,,7.0,,,NO
+,Kyung Hee University,South Korea,,,,,,,7.0,,,NO
+,Beijing Normal University,China,,,,,,,7.0,,,NO
+,Peking University,China,,,,,,,10.0,,,NO
+,Tsinghua University,China,,,,,,,10.0,,,NO
+,Fudan University,China,,,,,,,10.0,,,NO
+,Shanghai Jiao Tong University,China,,,,,,,10.0,,,NO
+,Zhejiang University,China,,,,,,,10.0,,,NO
+,Nanjing University,China,,,,,,,10.0,,,NO
+,Shanghai Jiao Tong University,China,,,,,,,10.0,,,NO
+,Zhejiang University,China,,,,,,,10.0,,,NO
+,Nanjing University,China,,,,,,,10.0,,,NO
+,University of Science and Technology of China,China,,,,,,,9.0,,,NO
+,Tongji University,China,,,,,,,9.0,,,NO
+,Wuhan University,China,,,,,,,9.0,,,NO
+,University of Copenhagen,Denmark,,,,,,,10.0,,,NO
+,Technical University of Denmark,Denmark,,,,,,,10.0,,,NO
+,Aarhus University,Denmark,,,,,,,10.0,,,NO
+,University of Southern Denmark (SDU),Denmark,,,,,,,8.0,,,NO
+,Aalborg University,Denmark,,,,,,,8.0,,,NO
+,Norwegian University of Science And Technology,Norway,,,,,,,8.0,,,NO
+,University of Bergen,Norway,,,,,,,8.0,,,NO
+,KU Leuven,Belgium,,,,,,,10.0,,,NO
+,Ghent University,Belgium,,,,,,,9.0,,,NO
+,Université catholique de Louvain (UCLouvain),Belgium,,,,,,,9.0,,,NO
+,Universite libre de Bruxelles,Belgium,,,,,,,8.0,,,NO
+,University of Antwerp,Belgium,,,,,,,10.0,,,NO
+,Vrije Universiteit Brussel (VUB),Belgium,,,,,,,8.0,,,NO
+,Université de Liège,Belgium,,,,,,,7.0,,,NO
+,Lund University,Sweden,,,,,,,10.0,,,NO
+,KTH Royal Institute of Technology,Sweden,,,,,,,10.0,,,NO
+,Uppsala University,Sweden,,,,,,,10.0,,,NO
+,Stockholm University,Sweden,,,,,,,9.0,,,NO
+,Chalmers University of Technology,Sweden,,,,,,,9.0,,,NO
+,University of Gothenburg,Sweden,,,,,,,8.0,,,NO
+,University of Gothenburg,Sweden,,,,,,,7.0,,,NO
+,Umea University,Sweden,,,,,,,6.0,,,NO
+,Aalto University,Finland,,,,,,,9.0,,,NO
+,University of Helsinki,Finland,,,,,,,9.0,,,NO
+,University of Oulu,Finland,,very good for wireless/uwb/6g,,,,,7.0,,,NO
+,University of Turku,Finland,,,,,,,7.0,,,NO
+,Lappeenranta-Lahti University of Technology LUT,Finland,,,,,,,6.0,,,NO
+,Technical University of Munich,Germany,22,,,,,,10.0,,,NO
+,Ludwig-Maximilians-Universität München,Germany,58,,,,,,9.0,,,NO
+,Universität Heidelberg,Germany,80,,,,,,9.0,,,NO
+,Freie Universitaet Berlin,Germany,88,,,,,,9.0,,,NO
+,"KIT, Karlsruhe Institute of Technology",Germany,98,,,,,,9.0,,,NO
+,RWTH Aachen University,Germany,105,,,,,,9.0,,,NO
+,Humboldt-Universität zu Berlin,Germany,130,,,,,,8.0,,,NO
+,Technische Universität Berlin (TU Berlin),Germany,145,,,,,,8.0,,,NO
+,Universität Hamburg,Germany,193,,,,,,8.0,,,NO
+,The Korea Advanced Institute of Science and Technology (KAIST),South Korea,,,,,,,,,,NO
+,Delft University of Technology,Netherlands,,embedded systems/wireless communications/robotics/signal processing/AI hardware,,,,,,,,NO
+,Eindhoven University of Technology,Netherlands,,embedded systems/chip design/signal processing/IoT/electronics,,,,,,,,NO
+,University of Twente,Netherlands,,localization/wireless sensing/embedded systems/robotics,,,,,,,,NO
+,ETH Zurich,Switzerland,,,,,,,,,,NO
+,EPFL,Switzerland,,,,,,,,,,NO
+,Institut Polytechnique de Paris,France,,,,,,,,,,NO
+,Grenoble INP,France,,very strong in embedded systems and microelectronics.,,,,,,,,NO
+,Harbin Institute of Technology,China,,,,,,,,,,NO
+,University of Tsukuba,Japan,,,,,,,,,,NO
+,IMEC / KU Leuven,Belgium,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+Lower Universities which can be good,,,,,,,,,,,,NO
+,University of Duisburg-Essen,Germany,801-850,"www.uni-due.de/international/international-admissions-en.php#application
+https://www.uni-due.de/iw/en/",,,,,5.0,,,NO
+,Technische Universität Dortmund,Germany,673,did not find phd,,,,,6.0,,,NO
+,Leibniz University Hannover,Germany,433,https://www.uni-hannover.de/en/studium/vor-dem-studium/bewerbung-zulassung,,,,,7.0,,,NO
+,Tampere University,Finland,423,https://www.tuni.fi/en/tau/doctoral-programmes/doctoral-programme-computing-and-electrical-engineering,,,,,7.0,,,NO
+,University of Eastern Finland,Finland,604,https://www.uef.fi/en/degree-programme/doctoral-programme-in-science-forestry-and-technology,,,,,6.0,,,NO
+,Linköping University,Sweden,310,https://liu.se/en/research/doctoral-studies/apply-for-doctoral-studies,,,,,8.0,,,NO
+,University of Stavanger,Norway,851-900,"https://www.uis.no/en/research/phd-at-uis
+https://www.uis.no/en/research/for-phd-candidates-tools-and-guidance",,,,,5.0,,,NO
+,Vrije Universiteit Brussel,Belgium,294,"https://www.vub.be/en
+(did not find phD)",,,,,8.0,,,NO
+,University of Twente,Netherlands,203,https://utwentecareers.nl/en/vacancies/?type=WP&page=2&category=PR,,,,,8.0,,,NO
+,Warsaw University of Technology,Poland,487,"https://www.cwm.pw.edu.pl/en/International-students/Studies-in-English
+https://eng.pw.edu.pl/Academics/Faculties",,,,,6.0,,,NO
+,Wrocław University of Science and Technology,Poland,851-900,https://www.polito.it/en/education/phd-programmes-and-postgraduate-school/admissions-to-phd-programmes/admissions/call-for-applications,,,,,5.0,,,NO
+,Politecnico di Torino,Italy,242,https://www.polito.it/en/education/phd-programmes-and-postgraduate-school/phd-programmes,,,,,8.0,,,NO
+,University of Pisa,Italy,343,https://www.unipi.it/en/education/courses/phd-programmes/,,,,,7.0,,,NO
+,Université Grenoble Alpes,France,321,https://www.univ-grenoble-alpes.fr/education/programs/programs-in-english/science-technology-health-engineering/science-technology-health-engineering-1372709.kjsp?RH=1580400124257,,,,,7.0,,,NO
+,Eindhoven University of Technology,Netherlands,140,https://www.tue.nl/en/education/graduate-school/phd,,,,,8.0,,,NO
+,,,,,,,,,,,,NO
+,Institut Polytechnique de Paris (3years phd programs),France,41,https://www.ip-paris.fr/en/education/phd-programs,,,,,8.0,,,NO
+,Hong Kong University of Science and Technology,Hong Kong,44,https://join.hkust.edu.hk/admissions/international-qualifications,,,,,9.0,,,NO
+,The Chinese University of Hong Kong,Hong Kong,32,https://www.cuhk.edu.hk/english/admissions/admissions.html,,,,,9.0,,,NO
+,City University of Hong Kong,Hong Kong,63,https://www.cityu.edu.hk/en/admissions,,,,,9.0,,,NO
+,University of Toronto,Canada,29,https://future.utoronto.ca/international-students,,,,,8.0,,,NO
+,University of British Columbia,Canada,40,"https://www.grad.ubc.ca/prospective-students/international-students
+https://www.ubc.ca/admissions/",,,,,8.0,,,NO
+,University of Waterloo,Canada,119,https://uwaterloo.ca/future-students/financing/international-scholarships,,,,,7.0,,,NO
+,McGill University,Canada,27,https://www.mcgill.ca/gradapplicants/how-apply,,,,,8.0,,,NO
+,University of Alberta,Canada,94,,,,,,7.0,,,NO
+,The University of Melbourne,Autralia,19,,,,,,8.0,,,NO
+,UNSW Sydney,Autralia,20,,,,,,8.0,,,NO
+,Monash University,Autralia,36,,,,,,8.0,,,NO
+,Harbin Institute of Technology,China,256,https://en.hit.edu.cn/11959/list.htm,,,,,7.0,,,NO
+,University of Tsukuba,Japan,350,"https://www.tsukuba.ac.jp/en/admissions/financial-scholarships/
+https://www.tsukuba.ac.jp/en/admissions/guidebook-enrollment/",,,,,7.0,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,,,,,,,,,,,,NO
+,Arizona State University,,,,,,,,,,,NO
+,University of Texas at Dallas,,,,,,,,,,,NO
+,Northeastern University,,,,,,,,,,,NO
+,North Carolina State University,,,,,,,,,,,NO
