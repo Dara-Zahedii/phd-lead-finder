@@ -60,11 +60,11 @@ Henrik Baktoft,University of Bergen,Norway,,Positioning aquatic animals with aco
 Nobby Stevens,KU Leuven,Belgium,,An Experimental Testbed for the Performance Evaluation of Optical Time Difference of Arrival Based Indoor Positioning (2024),,,,,10.0,https://openalex.org/A5020679063,,YES
 Eli De Poorter,Ghent University,Belgium,,Ultra Wideband (UWB) Localization Using Active CIR-Based Fingerprinting (2023),,,,,9.0,https://openalex.org/A5026442244,,YES
 Radu-Daniel Vatavu,Université catholique de Louvain (UCLouvain),Belgium,,RadarSense: Accurate Recognition of Mid-air Hand Gestures with Radar Sensing and Few Training Examples (2023),,,,,9.0,https://openalex.org/A5033726877,,YES
-,Universite libre de Bruxelles,Belgium,,,,,,,8.0,,,NO
-,University of Antwerp,Belgium,,,,,,,10.0,,,NO
-,Vrije Universiteit Brussel (VUB),Belgium,,,,,,,8.0,,,NO
-,Université de Liège,Belgium,,,,,,,7.0,,,NO
-,Lund University,Sweden,,,,,,,10.0,,,NO
+,Universite libre de Bruxelles,Belgium,,,,,,,8.0,,,YES
+Orhan Dağdevıren,University of Antwerp,Belgium,,An Experimental Evaluation of Indoor Localization in Autonomous Mobile Robots (2025),,,,,10.0,https://openalex.org/A5004224779,,YES
+Johan Stien,Vrije Universiteit Brussel (VUB),Belgium,,Machine learning-optimized terahertz ultra-wideband tunable metamaterial absorber (2025),,,,,8.0,https://openalex.org/A5117422059,,YES
+Emily Arnold,Université de Liège,Belgium,,Snow stratigraphy observations from Operation IceBridge surveys in Alaska using S and C band airborne ultra-wideband FMCW (frequency-modulated continuous wave) radar (2023),,,,,7.0,https://openalex.org/A5000544440,,YES
+Fredrik Tufvesson,Lund University,Sweden,,High-Precision Machine-Learning Based Indoor Localization with Massive MIMO System (2023),,,,,10.0,https://openalex.org/A5073439066,,YES
 ,KTH Royal Institute of Technology,Sweden,,,,,,,10.0,,,NO
 ,Uppsala University,Sweden,,,,,,,10.0,,,NO
 ,Stockholm University,Sweden,,,,,,,9.0,,,NO
