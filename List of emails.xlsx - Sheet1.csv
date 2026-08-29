@@ -70,11 +70,11 @@ Isaac Skog,Uppsala University,Sweden,,MAINS: A Magnetic Field Aided Inertial Nav
 Henrik Baktoft,Stockholm University,Sweden,,Positioning aquatic animals with acoustic transmitters (2023),,,,,9.0,https://openalex.org/A5087753687,,YES
 Mikko Valkama,Chalmers University of Technology,Sweden,,Failure Tolerant Phase-Only Indoor Positioning via Deep Learning (2025),,,,,9.0,https://openalex.org/A5054197935,,YES
 Daniel Arvidsson,University of Gothenburg,Sweden,,Fourteen days free-living evaluation of an open-source algorithm for counting steps in healthy adults with a large variation in physical activity level (2023),,,,,8.0,https://openalex.org/A5078102195,,YES
-,University of Gothenburg,Sweden,,,,,,,7.0,,,NO
-,Umea University,Sweden,,,,,,,6.0,,,NO
-,Aalto University,Finland,,,,,,,9.0,,,NO
-,University of Helsinki,Finland,,,,,,,9.0,,,NO
-,University of Oulu,Finland,,very good for wireless/uwb/6g,,,,,7.0,,,NO
+Daniel Arvidsson,University of Gothenburg,Sweden,,Fourteen days free-living evaluation of an open-source algorithm for counting steps in healthy adults with a large variation in physical activity level (2023),,,,,7.0,https://openalex.org/A5078102195,,YES
+,Umea University,Sweden,,,,,,,6.0,,,YES
+Nuria González‐Prelcic,Aalto University,Finland,,"Multicarrier ISAC: Advances in waveform design, signal processing, and learning under nonidealities (2024)",,,,,9.0,https://openalex.org/A5056278281,,YES
+Jukka Talvitie,University of Helsinki,Finland,,Toward Seamless Localization: Situational Awareness Using UWB Wearable Systems and Convolutional Neural Networks (2023),,,,,9.0,https://openalex.org/A5044609448,,YES
+Markku Juntti,University of Oulu,Finland,,Performance Analysis and Power Allocation for Massive MIMO ISAC Systems (2025),,,,,7.0,https://openalex.org/A5029534229,,YES
 ,University of Turku,Finland,,,,,,,7.0,,,NO
 ,Lappeenranta-Lahti University of Technology LUT,Finland,,,,,,,6.0,,,NO
 ,Technical University of Munich,Germany,22,,,,,,10.0,,,NO
