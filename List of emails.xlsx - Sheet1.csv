@@ -80,11 +80,11 @@ Zhen Zhang,Lappeenranta-Lahti University of Technology LUT,Finland,,Research on 
 Angela P. Schoellig,Technical University of Munich,Germany,22,UTIL: An ultra-wideband time-difference-of-arrival indoor localization dataset (2024),,,,,10.0,https://openalex.org/A5052147335,,YES
 Hélène Seroussi,Ludwig-Maximilians-Universität München,Germany,58,"Heterogeneous Basal Thermal Conditions Underpinning the Adélie‐George V Coast, East Antarctica (2024)",,,,,9.0,https://openalex.org/A5046027378,,YES
 Jari Nurmi,Universität Heidelberg,Germany,80,Adaptive approximate computing in edge AI and IoT applications: A review (2024),,,,,9.0,https://openalex.org/A5035297149,,YES
-,Freie Universitaet Berlin,Germany,88,,,,,,9.0,,,NO
-,"KIT, Karlsruhe Institute of Technology",Germany,98,,,,,,9.0,,,NO
-,RWTH Aachen University,Germany,105,,,,,,9.0,,,NO
-,Humboldt-Universität zu Berlin,Germany,130,,,,,,8.0,,,NO
-,Technische Universität Berlin (TU Berlin),Germany,145,,,,,,8.0,,,NO
+,Freie Universitaet Berlin,Germany,88,,,,,,9.0,,,YES
+Uwe D. Hanebeck,"KIT, Karlsruhe Institute of Technology",Germany,98,Continuous-Time Ultra-Wideband-Inertial Fusion (2023),,,,,9.0,https://openalex.org/A5055331421,,YES
+Elisabeth Clausen,RWTH Aachen University,Germany,105,Development and Evaluation of a UWB-Based Indoor Positioning System for Underground Mine Environments (2023),,,,,9.0,https://openalex.org/A5054432753,,YES
+Edna Hillmann,Humboldt-Universität zu Berlin,Germany,130,Pinpointing pigs: performance and challenges of an ultra-wideband real-time location system for tracking growing-finishing pigs under practical conditions (2024),,,,,8.0,https://openalex.org/A5017297216,,YES
+Robert B. Kohlhaas,Technische Universität Berlin (TU Berlin),Germany,145,Ultra-Wideband PIN-PD THz Emitter with > 5.5 THz Bandwidth (2024),,,,,8.0,https://openalex.org/A5049029990,,YES
 ,Universität Hamburg,Germany,193,,,,,,8.0,,,NO
 ,The Korea Advanced Institute of Science and Technology (KAIST),South Korea,,,,,,,,,,NO
 ,Delft University of Technology,Netherlands,,embedded systems/wireless communications/robotics/signal processing/AI hardware,,,,,,,,NO
